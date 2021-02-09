@@ -1,0 +1,26 @@
+{
+  "sys": {
+    "space": {
+      "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+    },
+    "id": "DNljrhXMTPWZbKPiyM7h0",
+    "type": "Entry",
+    "createdAt": "2020-10-20T08:32:03.443Z",
+    "updatedAt": "2020-10-20T08:54:26.552Z",
+    "environment": {
+      "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+    },
+    "revision": 2,
+    "contentType": {
+      "sys": { "type": "Link", "linkType": "ContentType", "id": "socialMedia" }
+    },
+    "locale": "en-US"
+  },
+  "fields": { "slug": "twitter", "url": " https://twitter.com/ivolo" },
+  "stringifySafe": "",
+  "total": 1,
+  "skip": 1,
+  "limit": 1,
+  "items": [],
+  "toPlainObject": {}
+}

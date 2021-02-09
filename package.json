@@ -1,15 +1,72 @@
 {
-  "name": "pip-krotoszyn",
-  "version": "0.1.0",
-  "private": true,
+  "name": "with-typescript-styled-components",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write '**/*{.ts,.tsx,.js,.json}'",
+    "lint": "yarn lint:eslint && yarn lint:stylelint",
+    "lint:eslint": "eslint src/**/* --ext=js,jsx,ts,tsx -c .eslintrc --no-error-on-unmatched-pattern --max-warnings 0",
+    "lint:stylelint": "stylelint 'src/**/*.(js|jsx|ts|tsx|css)'",
+    "test": "jest"
   },
   "dependencies": {
-    "next": "10.0.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "@contentful/rich-text-html-renderer": "^14.1.1",
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "@contentful/rich-text-types": "^14.1.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "contentful": "^7.14.8",
+    "next": "latest",
+    "next-absolute-url": "^1.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-helmet": "^6.1.0",
+    "react-is": "^16.13.1",
+    "start-server-and-test": "^1.11.5",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.10.4",
+    "@contentful/rich-text-types": "^14.1.1",
+    "@svgr/webpack": "^5.4.0",
+    "@testing-library/react": "11.0.4",
+    "@types/jest": "^26.0.13",
+    "@types/node": "12.0.12",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.4",
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "^5.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.5.2",
+    "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^7.12.1",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "jest-styled-components": "7.0.3",
+    "prettier": "2.1.2",
+    "pretty-quick": "^3.0.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.3",
+    "url-loader": "^4.1.1"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

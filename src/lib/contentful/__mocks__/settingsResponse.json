@@ -1,0 +1,75 @@
+{
+  "sys": {
+    "space": {
+      "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+    },
+    "id": "1G06LAhU47ILgHUNBklZob",
+    "type": "Entry",
+    "createdAt": "2020-10-20T11:59:43.788Z",
+    "updatedAt": "2020-10-20T12:36:28.514Z",
+    "environment": {
+      "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+    },
+    "revision": 2,
+    "contentType": {
+      "sys": { "type": "Link", "linkType": "ContentType", "id": "settings" }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "title": "Ilya Volodarsky",
+    "logo": {
+      "sys": {
+        "space": {
+          "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+        },
+        "id": "3SNzJetCDAPqXyTPLw8hEF",
+        "type": "Asset",
+        "createdAt": "2020-10-20T11:39:20.417Z",
+        "updatedAt": "2020-10-20T11:39:20.417Z",
+        "environment": {
+          "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "Photo",
+        "file": {
+          "url": "//images.ctfassets.net/orkzhdeieu0l/3SNzJetCDAPqXyTPLw8hEF/741d1b9979ae65e27f72d96262b95f14/Photo.png",
+          "details": {
+            "size": 36206,
+            "image": { "width": 160, "height": 160 }
+          },
+          "fileName": "Photo.png",
+          "contentType": "image/png"
+        }
+      }
+    },
+    "slug": "main",
+    "description": {
+      "nodeType": "document",
+      "data": {},
+      "content": [
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Founder @ Segment\nAngel Investor\nin Climate Tech & Healthcare",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    }
+  },
+  "stringifySafe": "",
+  "total": 1,
+  "skip": 1,
+  "limit": 1,
+  "items": [],
+  "toPlainObject": {}
+}

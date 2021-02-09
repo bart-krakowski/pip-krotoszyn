@@ -1,0 +1,914 @@
+{
+  "sys": {
+    "space": {
+      "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+    },
+    "id": "2hT9QYoKMlJFeEpJKls5sJ",
+    "type": "Entry",
+    "createdAt": "2020-10-16T14:02:20.579Z",
+    "updatedAt": "2020-10-19T13:38:05.473Z",
+    "environment": {
+      "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+    },
+    "revision": 8,
+    "contentType": {
+      "sys": { "type": "Link", "linkType": "ContentType", "id": "blogPost" }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "title": "Test",
+    "slug": "test",
+    "excerpt": "What are some dimensions that we care about? Email, Company, Job Title, Active/Churned Status, Subscription Plan, Monthly Recurring Revenue.",
+    "heroImage": {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "orkzhdeieu0l"
+          }
+        },
+        "id": "4cnD9a7ivRPWtLcyBF7tm1",
+        "type": "Asset",
+        "createdAt": "2020-10-16T15:17:21.276Z",
+        "updatedAt": "2020-10-16T15:17:21.276Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "locale": "en-US"
+      },
+      "fields": {
+        "title": "IMG 6006",
+        "file": {
+          "url": "//images.ctfassets.net/orkzhdeieu0l/4cnD9a7ivRPWtLcyBF7tm1/0d81ef2ec08d36424453a52a442e2abe/IMG_6006.JPG",
+          "details": {
+            "size": 799287,
+            "image": { "width": 2904, "height": 2906 }
+          },
+          "fileName": "IMG_6006.JPG",
+          "contentType": "image/jpeg"
+        }
+      }
+    },
+    "content": {
+      "nodeType": "document",
+      "data": {},
+      "content": [
+        {
+          "nodeType": "heading-2",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "The Plan",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Here’s some questions I started with:",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "unordered-list",
+          "content": [
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Who are our biggest users?",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "What’s the average company size of a paying user?",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "What features best seperate free plan users vs pro plan users?",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Who should be paying money but isn’t?",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "What are some dimensions that we care about? Email, Company, Job Title, Active/Churned Status, Subscription Plan, Monthly Recurring Revenue.",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Cool, looks like my CRM has all of these things already.",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "What about: who’s paying money and using our iOS SDK?",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Ok .. we’ll need to add Languages to each account.",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "heading-2",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Another Dimension",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "blockquote",
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "Another dimension, another dimension another dimension, another dimension. — Beastie Boys - Intergalactic",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "heading-1",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Heading 1",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "heading-2",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Heading 2",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "heading-3",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Heading 3",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "heading-4",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Heading 4",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "embedded-asset-block",
+          "content": [],
+          "data": {
+            "target": {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "orkzhdeieu0l"
+                  }
+                },
+                "id": "4cnD9a7ivRPWtLcyBF7tm1",
+                "type": "Asset",
+                "createdAt": "2020-10-16T15:17:21.276Z",
+                "updatedAt": "2020-10-16T15:17:21.276Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 1,
+                "locale": "en-US"
+              },
+              "fields": {
+                "title": "IMG 6006",
+                "file": {
+                  "url": "//images.ctfassets.net/orkzhdeieu0l/4cnD9a7ivRPWtLcyBF7tm1/0d81ef2ec08d36424453a52a442e2abe/IMG_6006.JPG",
+                  "details": {
+                    "size": 799287,
+                    "image": { "width": 2904, "height": 2906 }
+                  },
+                  "fileName": "IMG_6006.JPG",
+                  "contentType": "image/jpeg"
+                }
+              }
+            }
+          }
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        { "nodeType": "hr", "content": [], "data": {} },
+        { "nodeType": "hr", "content": [], "data": {} },
+        { "nodeType": "hr", "content": [], "data": {} },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "This is bold text",
+              "marks": [{ "type": "bold" }],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "This is bold text",
+              "marks": [{ "type": "bold" }],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "This is italic text",
+              "marks": [{ "type": "italic" }],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "This is italic text",
+              "marks": [{ "type": "italic" }],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Strikethrough",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "unordered-list",
+          "content": [
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 1",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 2",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 3",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 4",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Item 4.1",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Item 4.2",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        },
+                        {
+                          "nodeType": "unordered-list",
+                          "content": [
+                            {
+                              "nodeType": "list-item",
+                              "content": [
+                                {
+                                  "nodeType": "paragraph",
+                                  "content": [
+                                    {
+                                      "nodeType": "text",
+                                      "value": "Item 4.2.1",
+                                      "marks": [],
+                                      "data": {}
+                                    }
+                                  ],
+                                  "data": {}
+                                }
+                              ],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "ordered-list",
+          "content": [
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 1",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 2",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 3",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "nodeType": "list-item",
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Item 4",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "embedded-entry-block",
+          "content": [],
+          "data": {
+            "target": {
+              "sys": {
+                "space": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "Space",
+                    "id": "orkzhdeieu0l"
+                  }
+                },
+                "id": "NE19N0tBBbi7qV4uk5vEN",
+                "type": "Entry",
+                "createdAt": "2020-10-19T13:34:05.014Z",
+                "updatedAt": "2020-10-19T13:35:51.710Z",
+                "environment": {
+                  "sys": {
+                    "id": "master",
+                    "type": "Link",
+                    "linkType": "Environment"
+                  }
+                },
+                "revision": 2,
+                "contentType": {
+                  "sys": {
+                    "type": "Link",
+                    "linkType": "ContentType",
+                    "id": "codeBlock"
+                  }
+                },
+                "locale": "en-US"
+              },
+              "fields": {
+                "name": "Title",
+                "code": "This is my code\n# ssafa\n// safggghhh  ssd"
+              }
+            }
+          }
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "function fancyAlert(arg) {\n  if(arg) {\n    $.facebox({div:'#foo'})\n  }\n}\n",
+              "marks": [{ "type": "code" }],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "hi", "marks": [], "data": {} },
+            {
+              "nodeType": "text",
+              "value": "ghlig",
+              "marks": [{ "type": "code" }],
+              "data": {}
+            },
+            {
+              "nodeType": "text",
+              "value": "ht fdsfgsdfgsfg",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Inline ",
+              "marks": [],
+              "data": {}
+            },
+            {
+              "nodeType": "text",
+              "value": "code inline code inline code inline code",
+              "marks": [{ "type": "code" }],
+              "data": {}
+            },
+            { "nodeType": "text", "value": " ", "marks": [], "data": {} },
+            {
+              "nodeType": "text",
+              "value": "code inline code inline code inline code inline code inline code",
+              "marks": [{ "type": "code" }],
+              "data": {}
+            },
+            {
+              "nodeType": "text",
+              "value": " additional text",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "blockquote",
+          "content": [
+            {
+              "nodeType": "paragraph",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "It is the unofficial force—the Baker Street irregulars.",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} },
+            {
+              "nodeType": "hyperlink",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "link text",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": { "uri": "http://google.pl/" }
+            },
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            { "nodeType": "text", "value": "", "marks": [], "data": {} },
+            {
+              "nodeType": "hyperlink",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "link with title",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": { "uri": "http://google.pl/" }
+            },
+            { "nodeType": "text", "value": "", "marks": [], "data": {} }
+          ],
+          "data": {}
+        },
+        {
+          "nodeType": "paragraph",
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "Autoconverted link ",
+              "marks": [],
+              "data": {}
+            },
+            {
+              "nodeType": "hyperlink",
+              "content": [
+                {
+                  "nodeType": "text",
+                  "value": "https://google.pl",
+                  "marks": [],
+                  "data": {}
+                }
+              ],
+              "data": { "uri": "https://google.pl/" }
+            },
+            {
+              "nodeType": "text",
+              "value": " (enable linkify to see)",
+              "marks": [],
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    "author": {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "orkzhdeieu0l"
+          }
+        },
+        "id": "6NEgsY0I1A7Wb4wdnbRsuD",
+        "type": "Entry",
+        "createdAt": "2020-10-16T15:17:30.556Z",
+        "updatedAt": "2020-10-16T15:17:30.556Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "revision": 1,
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        },
+        "locale": "en-US"
+      },
+      "fields": {
+        "name": "Piotr Gsc",
+        "image": {
+          "sys": {
+            "space": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "orkzhdeieu0l"
+              }
+            },
+            "id": "4cnD9a7ivRPWtLcyBF7tm1",
+            "type": "Asset",
+            "createdAt": "2020-10-16T15:17:21.276Z",
+            "updatedAt": "2020-10-16T15:17:21.276Z",
+            "environment": {
+              "sys": {
+                "id": "master",
+                "type": "Link",
+                "linkType": "Environment"
+              }
+            },
+            "revision": 1,
+            "locale": "en-US"
+          },
+          "fields": {
+            "title": "IMG 6006",
+            "file": {
+              "url": "//images.ctfassets.net/orkzhdeieu0l/4cnD9a7ivRPWtLcyBF7tm1/0d81ef2ec08d36424453a52a442e2abe/IMG_6006.JPG",
+              "details": {
+                "size": 799287,
+                "image": { "width": 2904, "height": 2906 }
+              },
+              "fileName": "IMG_6006.JPG",
+              "contentType": "image/jpeg"
+            }
+          }
+        }
+      }
+    }
+  },
+  "total": 1,
+  "skip": 1,
+  "limit": 1,
+  "items": []
+}

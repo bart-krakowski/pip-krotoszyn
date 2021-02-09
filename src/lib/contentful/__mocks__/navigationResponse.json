@@ -1,0 +1,91 @@
+{
+  "sys": {
+    "space": {
+      "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+    },
+    "id": "1jXXFMF54FULhKlbgQXYte",
+    "type": "Entry",
+    "createdAt": "2020-10-20T08:57:13.108Z",
+    "updatedAt": "2020-10-20T11:30:11.476Z",
+    "environment": {
+      "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+    },
+    "revision": 3,
+    "contentType": {
+      "sys": { "type": "Link", "linkType": "ContentType", "id": "navigation" }
+    },
+    "locale": "en-US"
+  },
+  "fields": {
+    "elements": [
+      {
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+          },
+          "id": "5kMWPhQtY2BlA90wHGX9NL",
+          "type": "Entry",
+          "createdAt": "2020-10-19T14:04:49.627Z",
+          "updatedAt": "2020-10-20T11:27:01.078Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 2,
+          "contentType": {
+            "sys": { "type": "Link", "linkType": "ContentType", "id": "page" }
+          },
+          "locale": "en-US"
+        },
+        "fields": { "title": "Home", "slug": "/" }
+      },
+      {
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "orkzhdeieu0l" }
+          },
+          "id": "YyCfXwvFxt87QYviv3C66",
+          "type": "Entry",
+          "createdAt": "2020-10-20T09:32:01.379Z",
+          "updatedAt": "2020-10-20T12:38:22.152Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 3,
+          "contentType": {
+            "sys": { "type": "Link", "linkType": "ContentType", "id": "page" }
+          },
+          "locale": "en-US"
+        },
+        "fields": {
+          "title": "About me",
+          "slug": "about",
+          "content": {
+            "nodeType": "document",
+            "data": {},
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "I was born in St. Petersburg, Russia and emigrated to the US in 1996. I studied computer science (Course 6-3) at MIT, and dropped out before senior year to join Y-Combinator S11 class with a (terrible) EdTech idea.\nIn 2012, me and my co-founders launched analytics.js. It was an open-source library that went on to become Segment.com and created the Customer Data Platform category. That scaled to a multi-billion dollar valuation in 8 years.\nNow I'm an angel investor, focusing on Seed and Series A-stage climate tech & healthcare startups. I'm deeply passionate in medical diagnostics, functional medicine, autoimmunity, and the gut microbiota. I spend my time helping founders tackle hard problems in climate-tech and healthcare. ",
+                    "marks": [],
+                    "data": {}
+                  }
+                ],
+                "data": {}
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "slug": "main"
+  },
+  "stringifySafe": "",
+  "total": 1,
+  "skip": 1,
+  "limit": 1,
+  "items": [],
+  "toPlainObject": {}
+}
