@@ -1,27 +1,29 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
+import Footer from "components/Footer";
+
 const PageLayout: FC = ({ children }) => (
   <Wrapper>
     <NavigationContainer></NavigationContainer>
     <ChildrenSlot>{children}</ChildrenSlot>
-    <FooterSlot></FooterSlot>
+    <FooterSlot>
+      <Footer />
+    </FooterSlot>
   </Wrapper>
 );
 
 const Wrapper = styled.div`
   display: grid;
   grid-auto-rows: max-content;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-columns:
     [full-start] minmax(0, 1fr) [content-start] minmax(
       0,
       ${({ theme }) => theme.breakpoints.values.max}px
     )
     [content-end] minmax(0, 1fr) [full-end];
-  min-height: 100vh;
   margin: auto;
-  column-gap: 20px;
 
   ${({ theme }) => theme.breakpoints.up("desktop")} {
     grid-template-rows: auto 1fr auto;
@@ -40,11 +42,12 @@ const NavigationContainer = styled.div`
 `;
 
 const FooterSlot = styled.div`
-  grid-column: content;
+  grid-column: full;
 `;
 
 const ChildrenSlot = styled.main`
-  grid-column: full;
+  grid-column: content;
+  min-height: 100vh;
   padding: 0 20px;
 `;
 

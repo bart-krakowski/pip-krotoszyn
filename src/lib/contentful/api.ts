@@ -5,10 +5,6 @@ import { getAssetBlocks, imageToDataUrl } from "./utils";
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID || "",
   accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN || "",
-  environment:
-    process.env.CONTENTFUL_ENV === "test"
-      ? process.env.CONTENTFUL_TEST_ENV || ""
-      : process.env.CONTENTFUL_PROD_ENV || "",
 });
 
 export interface GetPosts {

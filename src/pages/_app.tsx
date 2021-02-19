@@ -118,6 +118,7 @@ MyApp.getInitialProps = async (
   const navigation = navigationData.fields.elements.map((page) => {
     const title = page.fields.title;
     const slug = page.fields.slug;
+
     if (!title || !slug) {
       return null;
     }

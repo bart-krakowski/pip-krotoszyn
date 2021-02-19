@@ -19,23 +19,12 @@ export const themeConfig = {
     },
   }),
   palette: {
-    follow: {
-      main: {
-        background: "#1B95E0",
-        border: "#0075CA",
-      },
-      hover: {
-        background: "#29A4EF",
-        border: "#0084DB",
-      },
-      focus: {
-        background: "#1C8FD6",
-        border: "#0070BF",
-      },
-    },
     common: {
       black: "#000",
       white: "#fff",
+    },
+    brand: {
+      primary: "#0C2B55",
     },
     greys: {
       900: "#061125",
@@ -44,9 +33,6 @@ export const themeConfig = {
       600: "#909DB5",
       200: "#E2E6ED",
       100: "#F9FAFC",
-    },
-    segment: {
-      primary: "#52BD94",
     },
     text: {
       heading: "#061125",
@@ -134,27 +120,6 @@ export const themeConfig = {
       fontStyle: "normal",
       fontWeight: 700,
       fontSize: "14px",
-      lineHeight: "24px",
-    },
-    code: {
-      fontFamily: robotoMono,
-      fontStyle: "normal",
-      fontWeight: 400,
-      fontSize: "14px",
-      lineHeight: "24px",
-    },
-    follow: {
-      fontFamily: latoFontFamily,
-      fontStyle: "normal",
-      fontWeight: 700,
-      fontSize: "12px",
-      lineHeight: "16px",
-    },
-    pagination: {
-      fontFamily: latoFontFamily,
-      fontStyle: "normal",
-      fontWeight: 400,
-      fontSize: "16px",
       lineHeight: "24px",
     },
   },

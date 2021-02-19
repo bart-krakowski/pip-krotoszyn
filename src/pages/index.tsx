@@ -3,14 +3,9 @@ import type { GetStaticProps } from "next";
 
 import { getSettings } from "lib/contentful";
 // import { IndexView, IndexViewPostProps } from "views/index/IndexView";
-import { getPage } from "lib/contentful";
-import { getPosts } from "lib/contentful";
-import Layout from "components/Layout";
-import SEO from "components/SEO";
+import { getPage, getPosts } from "lib/contentful";
 import { SEOIndexFields } from "lib/contentful/models";
-// import Navigation from "components/Navigation";
-// import Footer from "components/Footer";
-
+import IndexView from "views/index";
 interface PostMetadata {
   createdAt: string;
 }
@@ -28,7 +23,6 @@ interface IndexViewPostProps {
 interface IndexProps {
   posts: Array<IndexViewPostProps>;
   fields: SEOIndexFields;
-  lastPage: number;
 }
 
 export const getStaticProps: GetStaticProps<IndexProps> = async () => {
@@ -40,7 +34,6 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   });
 
   const page = await getPage("/");
-  const lastPage = Math.ceil(posts.total / postsPerPage);
 
   return {
     props: {
@@ -59,30 +52,10 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
         title: page.fields.title,
         seoDescription: page.fields.seoDescription,
       },
-      lastPage,
     },
   };
 };
 
 export default function Index({ fields }: IndexProps) {
-  return (
-    <Layout>
-      <SEO
-        subTitle={fields.title}
-        seoDescription={fields.seoDescription}
-        type="page"
-      />
-      {/* <BlogList>
-        {posts.map(({ post, metadata }) => (
-          <BlogListItem
-            key={post.slug}
-            type={type}
-            title={post.title}
-            slug={post.slug}
-            date={metadata.createdAt}
-          />
-        ))}
-      </BlogList> */}
-    </Layout>
-  );
+  return <IndexView fields={fields} />;
 }
