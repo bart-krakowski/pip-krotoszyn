@@ -2,11 +2,12 @@ import React, { FC } from "react";
 import { ThemeProvider } from "styled-components";
 
 import { createBreakpoints } from "./createBreakpoints";
+import { FontsStyle } from "./fonts";
 
 import { NormalizeStyle } from "./GlobalNormalizeStyle";
 
-const latoFontFamily = `Lato, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif`;
-const robotoMono = `"Roboto Mono", monospace`;
+const roslindaleFontFamily = `Roslindale, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif`;
+const montserratFontFamily = `Montserrat, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif`;
 
 export const themeConfig = {
   // media queries
@@ -36,8 +37,8 @@ export const themeConfig = {
     },
     text: {
       heading: "#061125",
-      primary: "#2E3749",
-      secondary: "#6A7489",
+      primary: "#000000",
+      secondary: "#ffffff",
     },
     icons: {
       primary: "#919DB5",
@@ -46,77 +47,70 @@ export const themeConfig = {
   },
   typography: {
     h1: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
       fontSize: "32px",
       lineHeight: "44px",
     },
     h2: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
       fontSize: "28px",
       lineHeight: "40px",
     },
     h3: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
       fontSize: "24px",
       lineHeight: "40px",
     },
     h4: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
-      fontSize: "20px",
-      lineHeight: "32px",
+      fontSize: "18px",
+      lineHeight: "25px",
     },
     h5: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
       fontSize: "16px",
       lineHeight: "24px",
     },
     h6: {
-      fontFamily: latoFontFamily,
+      fontFamily: roslindaleFontFamily,
       fontStyle: "normal",
       fontWeight: 900,
       fontSize: "12px",
       lineHeight: "20px",
     },
     lead: {
-      fontFamily: latoFontFamily,
+      fontFamily: montserratFontFamily,
       fontStyle: "normal",
       fontWeight: 700,
       fontSize: "18px",
       lineHeight: "36px",
     },
     body1: {
-      fontFamily: latoFontFamily,
+      fontFamily: montserratFontFamily,
       fontStyle: "normal",
       fontWeight: 400,
-      fontSize: "18px",
-      lineHeight: "36px",
+      fontSize: "13px",
+      lineHeight: "18px",
     },
     body2: {
-      fontFamily: latoFontFamily,
+      fontFamily: montserratFontFamily,
       fontStyle: "normal",
       fontWeight: 400,
       fontSize: "12px",
       lineHeight: "20px",
     },
-    subhead: {
-      fontFamily: latoFontFamily,
-      fontStyle: "normal",
-      fontWeight: 400,
-      fontSize: "16px",
-      lineHeight: "24px",
-    },
     menu: {
-      fontFamily: latoFontFamily,
+      fontFamily: montserratFontFamily,
       fontStyle: "normal",
       fontWeight: 700,
       fontSize: "14px",
@@ -128,6 +122,7 @@ export const themeConfig = {
 const Theme: FC = ({ children }) => (
   <ThemeProvider theme={themeConfig}>
     <NormalizeStyle />
+    <FontsStyle />
     {children}
   </ThemeProvider>
 );
