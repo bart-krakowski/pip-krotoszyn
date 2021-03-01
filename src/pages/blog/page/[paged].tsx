@@ -1,26 +1,18 @@
 import React from "react";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
-import { getPage, getPosts, getSettings } from "lib/contentful";
+import { getNews, getPage, getSettings } from "lib/contentful";
 import type { SEOIndexFields } from "lib/contentful";
-import { IndexView } from "views/index/IndexView";
-import type { IndexViewPostProps } from "views/index/IndexView";
-
-import Layout from "components/StickyPageLayout";
-import Footer from "components/Footer";
-import Profile from "components/Profile";
-import Navigation from "components/Navigation";
-import { useSettings } from "contexts/settingsContext";
+import Layout from "components/Layout";
 
 interface IndexProps {
-  posts: Array<IndexViewPostProps>;
   currentPage: number;
   lastPage: number;
   fields: SEOIndexFields;
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = await getPosts({ type: "blog", select: "sys.id" });
+  const posts = await getNews({ select: "sys.id" });
 
   const paths: Array<{
     params: {
@@ -84,41 +76,6 @@ export const getStaticProps: GetStaticProps<IndexProps> = async ({
   };
 };
 
-export default function BlogPostView({
-  posts,
-  currentPage,
-  lastPage,
-  fields,
-}: IndexProps) {
-  const settings = useSettings();
-
-  return (
-    <Layout
-      profile={
-        <Profile
-          twitter={settings.socialMedia.twitter.url}
-          linkedin={settings.socialMedia.linkedin.url}
-          description={settings.description}
-          logo={settings.logo.fields.file.url}
-          investor={settings.investor}
-          title={settings.title}
-        />
-      }
-      navigation={<Navigation />}
-      footer={
-        <Footer
-          twitter={settings.socialMedia.twitter.url}
-          linkedin={settings.socialMedia.linkedin.url}
-        />
-      }
-    >
-      <IndexView
-        type="blog"
-        posts={posts}
-        currentPage={currentPage}
-        lastPage={lastPage}
-        fields={fields}
-      />
-    </Layout>
-  );
+export default function BlogPostView({}: IndexProps) {
+  return <Layout></Layout>;
 }

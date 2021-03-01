@@ -13,7 +13,23 @@ const PageLayout: FC = ({ children }) => (
   </Wrapper>
 );
 
-const Wrapper = styled.div`
+const Wrapper = styled.div``;
+
+const NavigationContainer = styled.div`
+  width: calc(${({ theme }) => theme.breakpoints.values.max}px + 20px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  ${(p) => p.theme.breakpoints.up("desktop")} {
+    padding: 0px;
+  }
+`;
+
+const FooterSlot = styled.div``;
+
+const ChildrenSlot = styled.main`
+  min-height: 100vh;
   display: grid;
   grid-auto-rows: max-content;
   grid-template-rows: auto 1fr auto;
@@ -28,27 +44,6 @@ const Wrapper = styled.div`
   ${({ theme }) => theme.breakpoints.up("desktop")} {
     grid-template-rows: auto 1fr auto;
   }
-`;
-
-const NavigationContainer = styled.div`
-  width: calc(${({ theme }) => theme.breakpoints.values.max}px + 20px);
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  ${(p) => p.theme.breakpoints.up("desktop")} {
-    padding: 0px;
-  }
-`;
-
-const FooterSlot = styled.div`
-  grid-column: full;
-`;
-
-const ChildrenSlot = styled.main`
-  grid-column: content;
-  min-height: 100vh;
-  padding: 0 20px;
 `;
 
 export default PageLayout;

@@ -1,5 +1,13 @@
 import { createClient, Entry } from "contentful";
-import { BlogPost, Navigation, Settings, SinglePage } from "./models";
+import {
+  News,
+  Navigation,
+  Settings,
+  SinglePage,
+  Gallery,
+  Intention,
+  Announcement,
+} from "./models";
 import { getAssetBlocks, imageToDataUrl } from "./utils";
 
 const client = createClient({
@@ -7,25 +15,82 @@ const client = createClient({
   accessToken: process.env.CONTENTFUL_DELIVERY_API_TOKEN || "",
 });
 
-export interface GetPosts {
-  category?: "intentions" | "announcements" | "news" | "gallery" | "all";
+export interface GetNewsProps {
   perPage?: number;
   currentPage?: number;
   select?: string;
 }
 
-export const getPosts = async ({
+export const getNews = async ({
   perPage,
   currentPage = 1,
   select,
-  category,
-}: GetPosts) => {
-  return await client.getEntries<BlogPost>({
-    content_type: "blogPost",
+}: GetNewsProps) => {
+  return await client.getEntries<News>({
+    content_type: "news",
     order: "-sys.createdAt",
     limit: perPage,
     skip: perPage ? Math.abs(currentPage - 1) * perPage : 0,
-    "fields.category[in]": category,
+    select: select,
+  });
+};
+
+export interface GetGalleriesProps {
+  perPage?: number;
+  currentPage?: number;
+  select?: string;
+}
+
+export const getGalleries = async ({
+  perPage,
+  currentPage = 1,
+  select,
+}: GetGalleriesProps) => {
+  return await client.getEntries<Gallery>({
+    content_type: "gallery",
+    order: "-sys.createdAt",
+    limit: perPage,
+    skip: perPage ? Math.abs(currentPage - 1) * perPage : 0,
+    select: select,
+  });
+};
+
+export interface GetIntentionsProps {
+  perPage?: number;
+  currentPage?: number;
+  select?: string;
+}
+
+export const getIntentions = async ({
+  perPage,
+  currentPage = 1,
+  select,
+}: GetIntentionsProps) => {
+  return await client.getEntries<Intention>({
+    content_type: "intention",
+    order: "-sys.createdAt",
+    limit: perPage,
+    skip: perPage ? Math.abs(currentPage - 1) * perPage : 0,
+    select: select,
+  });
+};
+
+export interface GetAnnouncementsProps {
+  perPage?: number;
+  currentPage?: number;
+  select?: string;
+}
+
+export const getAnnouncements = async ({
+  perPage,
+  currentPage = 1,
+  select,
+}: GetIntentionsProps) => {
+  return await client.getEntries<Announcement>({
+    content_type: "announcement",
+    order: "-sys.createdAt",
+    limit: perPage,
+    skip: perPage ? Math.abs(currentPage - 1) * perPage : 0,
     select: select,
   });
 };
@@ -42,24 +107,8 @@ export const getNavigation = async (slug: string) => {
   return navigation;
 };
 
-export interface GetPostParams {
-  slug: string;
-}
-
-export const getPost = async ({ slug }: GetPostParams) => {
-  const response = await client.getEntries<BlogPost>({
-    content_type: "blogPost",
-    limit: 1,
-    "fields.slug[in]": slug,
-  });
-
-  const [post] = response.items;
-
-  return post;
-};
-
 export type GetImagesThumbnailsParams = {
-  post: Entry<BlogPost>;
+  post: Entry<News>;
   thumbnailWidth?: number;
   thumbnailQuality?: number;
 };

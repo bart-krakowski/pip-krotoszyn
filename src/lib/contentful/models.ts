@@ -5,18 +5,46 @@ export interface Author {
   image: Asset;
 }
 
-export interface BlogPost {
+export interface News {
   title: string;
   slug: string;
-  excerpt?: string;
   content?: RichTextDocument;
   author?: Author;
-  seoDescription: string;
+  seoDescription?: string;
+  thumbnail: Asset;
+}
+
+export interface Gallery {
+  title: string;
+  slug: string;
+  seoDescription?: string;
+  thumbnail: Asset;
+  images: Array<Asset>;
+}
+
+export interface Intention {
+  title: string;
+  slug: string;
+  seoDescription?: string;
+  thumbnail: Asset;
+  content: RichTextDocument;
+}
+
+export interface Announcement {
+  title: string;
+  slug: string;
+  seoDescription?: string;
+  thumbnail: Asset;
+  content: RichTextDocument;
 }
 
 export interface Page {
   title: string;
   slug: string;
+  thumbnail: Asset;
+  seoDescription: string;
+  content: string;
+  subpages: Array<Entry<Page>>;
 }
 
 export interface SinglePage {

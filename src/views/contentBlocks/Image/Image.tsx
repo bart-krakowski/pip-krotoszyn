@@ -2,7 +2,6 @@ import React, { FC, useEffect, useMemo, useRef, useState } from "react";
 import styled, { css } from "styled-components";
 import Figure from "../Figure";
 import { useImageObserver } from "./ImageObserverContext";
-import { canvasRGB } from "stackblur-canvas";
 
 interface ImageProps {
   src: string;
@@ -141,7 +140,6 @@ const Thumbnail: FC<{ src: string; alt: string }> = ({ src, alt }) => {
 
     image.onload = () => {
       ctx?.drawImage(image, 0, 0, canvas.width, canvas.height);
-      canvasRGB(canvas, 0, 0, canvas.width, canvas.height, 30);
       setVisible(true);
     };
   }, [src]);

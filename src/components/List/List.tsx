@@ -7,7 +7,7 @@ interface ListProps {
 const List: FC<ListProps> = ({ items }) => (
   <Wrapper>
     {items.map((el) => (
-      <Item>{el}</Item>
+      <Item key={el}>{el}</Item>
     ))}
   </Wrapper>
 );

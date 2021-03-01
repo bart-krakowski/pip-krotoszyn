@@ -6,6 +6,7 @@ export interface TypographyProps extends HTMLAttributes<HTMLElement> {
   as?: ElementType<{ className: string }>;
   className?: string;
   color?: keyof DefaultTheme["palette"]["text"];
+  center?: boolean;
 }
 
 const getElementTag = (variant: TypographyProps["variant"]) => {
@@ -41,6 +42,7 @@ const RawTypography = forwardRef<HTMLElement, TypographyProps>(
 const Typography = styled(RawTypography)`
   ${({ theme, variant }) => theme.typography[variant]};
   color: ${({ theme, color = "primary" }) => theme.palette.text[color]};
+  text-align: ${({ center }) => (center ? "center" : undefined)};
 
   ${({ theme }) => theme.breakpoints.down("desktop")} {
     ${({ theme, variant }) => (theme.typography[variant] as any)?.mobile ?? ""}
