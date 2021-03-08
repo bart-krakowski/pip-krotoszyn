@@ -36,7 +36,10 @@ const Container = styled.div`
   position: relative;
   max-width: ${({ theme }) => theme.breakpoints.values.max}px;
   margin: auto;
-  padding-right: 220px;
+
+  ${({ theme }) => theme.breakpoints.up("desktop")} {
+    padding-right: 220px;
+  }
 `;
 
 const Inner = styled.div`
@@ -45,7 +48,12 @@ const Inner = styled.div`
 
 const Img = styled.img`
   position: absolute;
+  display: none;
   max-width: 220px;
   top: 37px;
   right: 0;
+
+  ${({ theme }) => theme.breakpoints.up("desktop")} {
+    display: block;
+  }
 `;

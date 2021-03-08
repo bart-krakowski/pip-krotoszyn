@@ -41,14 +41,9 @@ export const getStaticProps: GetStaticProps<IndexProps> = async ({
     throw new Error("Params are missing");
   }
 
+  const posts = await getNews({ select: "sys.id" });
   const settings = await getSettings();
   const postsPerPage = settings.fields.postsPerPage;
-
-  const posts = await getPosts({
-    type: "blog",
-    perPage: postsPerPage,
-    currentPage: Number(params.paged),
-  });
 
   const lastPage = Math.ceil(posts.total / postsPerPage);
   const page = await getPage("/");

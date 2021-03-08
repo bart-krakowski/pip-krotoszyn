@@ -44,7 +44,7 @@ const Wrapper = styled.section`
   column-gap: 120px;
   row-gap: 50px;
   align-items: center;
-  padding: 58px 20px;
+  padding: 110px 20px;
 `;
 
 const Column = styled.div``;

@@ -9,7 +9,7 @@ export interface News {
   title: string;
   slug: string;
   content?: RichTextDocument;
-  author?: Author;
+  author?: Author | null;
   seoDescription?: string;
   thumbnail: Asset;
 }
@@ -72,6 +72,13 @@ export interface Settings {
   investor: string;
   ogImage: Asset;
   ogTwitter: string;
+}
+
+export interface Schedule {
+  slug: string;
+  confession: RichTextDocument;
+  devotions: RichTextDocument;
+  masses: RichTextDocument;
 }
 
 export interface Author {

@@ -15,7 +15,9 @@ import {
   getAnnouncements,
   getGalleries,
   getIntentions,
+  getSchedule,
 } from "lib/contentful/api";
+import type { Document as RichTextDocument } from "@contentful/rich-text-types";
 
 interface PostMetadata {
   createdAt: string;
@@ -40,12 +42,16 @@ export interface IndexViewGalleryProps {
   post: Gallery;
   metadata: PostMetadata;
 }
-
 interface IndexProps {
   announcementPosts: Array<IndexViewAnnouncementPostsProps>;
   intensionsPosts: Array<IndexViewIntensionsPostsProps>;
   newsPosts: Array<IndexViewNewsProps>;
   galleryPosts: Array<IndexViewGalleryProps>;
+  schedule: {
+    confession: RichTextDocument;
+    devotions: RichTextDocument;
+    masses: RichTextDocument;
+  };
   fields: SEOIndexFields;
 }
 
@@ -69,6 +75,8 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
     perPage: postsPerPage,
   });
 
+  const schedule = await getSchedule();
+
   const page = await getPage("/");
 
   return {
@@ -80,7 +88,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
             slug: item.fields.slug,
             seoDescription: item.fields.seoDescription
               ? item.fields.seoDescription
-              : null,
+              : "",
             thumbnail: item.fields.thumbnail,
             content: item.fields.content,
           },
@@ -96,7 +104,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
             slug: item.fields.slug,
             seoDescription: item.fields.seoDescription
               ? item.fields.seoDescription
-              : null,
+              : "",
             thumbnail: item.fields.thumbnail,
             content: item.fields.content,
           },
@@ -114,7 +122,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
             author: item.fields.author ? item.fields.author : null,
             seoDescription: item.fields.seoDescription
               ? item.fields.seoDescription
-              : null,
+              : "",
             thumbnail: item.fields.thumbnail,
           },
           metadata: {
@@ -129,7 +137,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
             slug: item.fields.slug,
             seoDescription: item.fields.seoDescription
               ? item.fields.seoDescription
-              : null,
+              : "",
             thumbnail: item.fields.thumbnail,
             images: item.fields.images,
           },
@@ -138,6 +146,11 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
           },
         };
       }),
+      schedule: {
+        confession: schedule.fields.confession,
+        devotions: schedule.fields.devotions,
+        masses: schedule.fields.masses,
+      },
       fields: {
         title: page.fields.title,
         seoDescription: page.fields.seoDescription,
@@ -152,6 +165,7 @@ export default function Index({
   announcementPosts,
   newsPosts,
   galleryPosts,
+  schedule,
 }: IndexProps) {
   return (
     <IndexView
@@ -160,6 +174,7 @@ export default function Index({
       galleryPosts={galleryPosts}
       intensionsPosts={intensionsPosts}
       announcementPosts={announcementPosts}
+      schedule={schedule}
     />
   );
 }

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import SEO from "components/SEO";
 import Layout from "components/Layout";
 import { SEOIndexFields } from "lib/contentful/models";
+import type { Document as RichTextDocument } from "@contentful/rich-text-types";
 import {
   IndexViewAnnouncementPostsProps,
   IndexViewGalleryProps,
@@ -14,6 +15,7 @@ import PostTile from "components/PostTile";
 import Typography from "components/Typography";
 import QuoteSection from "./QuoteSection";
 import AboutSection from "./AboutSection";
+import Hero from "./Hero";
 
 export interface PostMetadata {
   createdAt: string;
@@ -25,6 +27,11 @@ export interface IndexViewProps {
   intensionsPosts: Array<IndexViewIntensionsPostsProps>;
   newsPosts: Array<IndexViewNewsProps>;
   galleryPosts: Array<IndexViewGalleryProps>;
+  schedule: {
+    confession: RichTextDocument;
+    devotions: RichTextDocument;
+    masses: RichTextDocument;
+  };
 }
 
 const IndexView: FC<IndexViewProps> = ({
@@ -33,6 +40,7 @@ const IndexView: FC<IndexViewProps> = ({
   announcementPosts,
   newsPosts,
   galleryPosts,
+  schedule,
 }) => {
   return (
     <Layout>
@@ -41,6 +49,7 @@ const IndexView: FC<IndexViewProps> = ({
         seoDescription={fields.seoDescription}
         type="page"
       />
+      <Hero schedule={schedule} />
       <AboutSection />
       {(intensionsPosts.length > 0 || announcementPosts.length > 0) && (
         <Section>

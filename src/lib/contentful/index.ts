@@ -1,4 +1,10 @@
-export { getNews, getNavigation, getPage, getSettings } from "./api";
+export {
+  getNews,
+  getNavigation,
+  getPage,
+  getSettings,
+  getSchedule,
+} from "./api";
 
 export type {
   News,

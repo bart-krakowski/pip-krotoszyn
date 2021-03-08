@@ -7,6 +7,7 @@ import {
   Gallery,
   Intention,
   Announcement,
+  Schedule,
 } from "./models";
 import { getAssetBlocks, imageToDataUrl } from "./utils";
 
@@ -165,6 +166,18 @@ export const getImagesThumbnails = async ({
 export const getSettings = async () => {
   const response = await client.getEntries<Settings>({
     content_type: "settings",
+    limit: 1,
+    "fields.slug[in]": "main",
+  });
+
+  const [settings] = response.items;
+
+  return settings;
+};
+
+export const getSchedule = async () => {
+  const response = await client.getEntries<Schedule>({
+    content_type: "schedule",
     limit: 1,
     "fields.slug[in]": "main",
   });
