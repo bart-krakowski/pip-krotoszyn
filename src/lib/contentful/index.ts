@@ -4,6 +4,7 @@ export {
   getPage,
   getSettings,
   getSchedule,
+  getSingleNews,
 } from "./api";
 
 export type {

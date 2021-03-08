@@ -28,7 +28,7 @@ const NavigationContainer = styled.div`
 
 const FooterSlot = styled.div``;
 
-const ChildrenSlot = styled.main`
+const ChildrenSlot = styled.div`
   min-height: 100vh;
   display: grid;
   grid-auto-rows: max-content;

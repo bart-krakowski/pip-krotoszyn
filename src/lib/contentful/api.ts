@@ -36,6 +36,21 @@ export const getNews = async ({
   });
 };
 
+export interface GetSingleNewsParams {
+  slug: string;
+}
+export const getSingleNews = async ({ slug }: GetSingleNewsParams) => {
+  const response = await client.getEntries<News>({
+    content_type: "news",
+    limit: 1,
+    "fields.slug[in]": slug,
+  });
+
+  const [post] = response.items;
+
+  return post;
+};
+
 export interface GetGalleriesProps {
   perPage?: number;
   currentPage?: number;

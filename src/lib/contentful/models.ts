@@ -10,7 +10,7 @@ export interface News {
   slug: string;
   content?: RichTextDocument;
   author?: Author | null;
-  seoDescription?: string;
+  seoDescription: string;
   thumbnail: Asset;
 }
 

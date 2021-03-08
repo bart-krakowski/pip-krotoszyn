@@ -60,10 +60,12 @@ export default Hero;
 const Wrapper = styled.header`
   display: grid;
   grid-column: full;
-  grid-template-columns: [full-start] minmax(0, 1fr) [content-start] minmax(
+  grid-template-columns:
+    [full-start] minmax(0, 1fr) [content-start] minmax(
       0,
-      1168px
-    ) [content-end] minmax(0, 1fr) [full-end];
+      ${({ theme }) => theme.breakpoints.values.max}px
+    )
+    [content-end] minmax(0, 1fr) [full-end];
 `;
 
 const Container = styled.div`
@@ -71,7 +73,6 @@ const Container = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-column: content;
   padding: 0 15px;
   height: 100%;
   background: linear-gradient(
@@ -88,4 +89,5 @@ const Container = styled.div`
 
 const TabsWrapper = styled.div`
   grid-column: content;
+  max-width: ${({ theme }) => theme.breakpoints.values.max};
 `;

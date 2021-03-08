@@ -5,7 +5,7 @@ import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Image from "views/contentBlocks/Image";
 
 interface CreateRenderOptionsParams {
-  thumbnails: { [id: string]: string };
+  thumbnail: string;
 }
 
 interface CreateRenderOptions {
