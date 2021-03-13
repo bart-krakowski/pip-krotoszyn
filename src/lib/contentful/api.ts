@@ -3,7 +3,6 @@ import {
   News,
   Navigation,
   Settings,
-  SinglePage,
   Gallery,
   Intention,
   Announcement,
@@ -203,7 +202,7 @@ export const getSchedule = async () => {
 };
 
 export const getPage = async (slug: string) => {
-  const response = await client.getEntries<SinglePage>({
+  const response = await client.getEntries<Page>({
     content_type: "page",
     limit: 1,
     "fields.slug[in]": slug,

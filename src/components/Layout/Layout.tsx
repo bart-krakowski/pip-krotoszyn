@@ -19,7 +19,7 @@ const NavigationContainer = styled.div`
   width: calc(${({ theme }) => theme.breakpoints.values.max}px + 20px);
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
 
   ${(p) => p.theme.breakpoints.up("desktop")} {
     padding: 0px;

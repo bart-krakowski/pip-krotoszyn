@@ -12,8 +12,8 @@ export type {
   Intention,
   Gallery,
   Navigation,
-  SinglePage,
   Settings,
   SEOIndexFields,
   Announcement,
+  Page,
 } from "./models";

@@ -43,16 +43,8 @@ export interface Page {
   slug: string;
   thumbnail: Asset;
   seoDescription: string;
-  content: string;
+  content: RichTextDocument;
   subpages: Array<Entry<Page>>;
-}
-
-export interface SinglePage {
-  title: string;
-  slug: string;
-  headline: string;
-  content: RichTextDocument | undefined;
-  seoDescription: string;
 }
 
 export interface SEOIndexFields {

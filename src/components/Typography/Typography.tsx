@@ -33,9 +33,9 @@ const getElementTag = (variant: TypographyProps["variant"]) => {
 };
 
 const RawTypography = forwardRef<HTMLElement, TypographyProps>(
-  ({ variant, as, ...rest }, ref) => {
+  ({ variant, as, center = false, ...rest }, ref) => {
     const Component: any = as ?? getElementTag(variant);
-    return <Component ref={ref} {...rest} />;
+    return <Component ref={ref} center={center} {...rest} />;
   }
 );
 

@@ -72,5 +72,11 @@ export const getStaticProps: GetStaticProps<IndexProps> = async ({
 };
 
 export default function BlogPostView({}: IndexProps) {
-  return <Layout></Layout>;
+  return (
+    <Layout>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      voluptatum nisi, fugiat a quidem dolores aspernatur optio ab dolorum esse
+      neque iusto quas ipsa incidunt voluptates iure, distinctio aut eaque!
+    </Layout>
+  );
 }

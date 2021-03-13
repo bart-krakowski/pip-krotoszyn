@@ -50,7 +50,7 @@ const IndexView: FC<IndexViewProps> = ({
         type="page"
       />
       <Hero schedule={schedule} />
-      <main>
+      <Main>
         <AboutSection />
         {(intensionsPosts.length > 0 || announcementPosts.length > 0) && (
           <Section>
@@ -117,7 +117,7 @@ const IndexView: FC<IndexViewProps> = ({
             </PostsWrapper>
           </Section>
         )}
-      </main>
+      </Main>
     </Layout>
   );
 };
@@ -129,6 +129,10 @@ const Section = styled.section`
   display: grid;
   gap: 25px;
   padding: 58px 20px;
+`;
+
+const Main = styled.main`
+  grid-column: content;
 `;
 
 const PostsWrapper = styled.div`

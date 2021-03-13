@@ -2,7 +2,7 @@ import React from "react";
 import type { GetStaticProps, GetStaticPaths } from "next";
 
 import { getNews } from "lib/contentful";
-import PostView, { PostViewProps } from "views/post/PostView";
+import PostView, { PostViewProps } from "views/post";
 import { getSingleNews } from "lib/contentful/api";
 import Layout from "components/Layout";
 
@@ -41,7 +41,6 @@ export const getStaticProps: GetStaticProps<
     props: {
       post: {
         slug: post.fields.slug,
-        author: post.fields.author,
         title: post.fields.title,
         content: post.fields.content,
         thumbnail: post.fields.thumbnail,

@@ -18,7 +18,7 @@ const PostTile: FC<PostTileProps> = ({
   slug,
   variant = "default",
 }) => (
-  <Wrapper href={`/post/${slug}`}>
+  <Wrapper href={`/news/${slug}`}>
     <Img src={img.fields.file.url} />
     <Content variant={variant}>
       {variant === "default" && (

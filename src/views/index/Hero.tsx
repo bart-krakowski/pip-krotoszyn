@@ -88,6 +88,7 @@ const Container = styled.div`
 `;
 
 const TabsWrapper = styled.div`
+  position: relative;
   grid-column: content;
-  max-width: ${({ theme }) => theme.breakpoints.values.max};
+  max-width: ${({ theme }) => theme.breakpoints.values.max}px;
 `;
