@@ -1,22 +1,8 @@
 import React from "react";
 import type { GetStaticProps } from "next";
 
-import { Gallery, getSettings, Page } from "lib/contentful";
-import {
-  getPage,
-  getNews,
-  Intention,
-  News,
-  SEOIndexFields,
-  Announcement,
-} from "lib/contentful";
-import {
-  getAnnouncements,
-  getGalleries,
-  getIntentions,
-  getSchedule,
-} from "lib/contentful/api";
-import type { Document as RichTextDocument } from "@contentful/rich-text-types";
+import { Page } from "lib/contentful";
+import { getPage, getNews, News } from "lib/contentful";
 import PageView from "views/page";
 
 interface PostMetadata {
