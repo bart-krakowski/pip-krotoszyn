@@ -6,6 +6,7 @@ import Image from "views/contentBlocks/Image";
 
 interface CreateRenderOptionsParams {
   thumbnail: string;
+  thumbnails: any;
 }
 
 interface CreateRenderOptions {
