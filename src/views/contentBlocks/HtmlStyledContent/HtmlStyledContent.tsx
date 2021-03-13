@@ -156,18 +156,6 @@ const HtmlStyledContent = styled.div`
   strong {
     font-weight: 600;
   }
-
-  /* Inline Code */
-  code {
-    ${({ theme }) => theme.typography.code}
-    padding: 2px 4px;
-    color: ${({ theme }) => theme.palette.text.secondary};
-    background: ${({ theme }) => theme.palette.greys[100]};
-    border: 1px solid ${({ theme }) => theme.palette.greys[200]};
-    border-radius: 2px;
-  }
-
-  /* Figures with captions */
 `;
 
 export default HtmlStyledContent;
