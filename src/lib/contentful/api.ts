@@ -7,6 +7,7 @@ import {
   Intention,
   Announcement,
   Schedule,
+  Page,
 } from "./models";
 import { getAssetBlocks, imageToDataUrl } from "./utils";
 
