@@ -30,15 +30,6 @@ const FooterSlot = styled.div``;
 
 const ChildrenSlot = styled.div`
   min-height: 100vh;
-  display: grid;
-  grid-auto-rows: max-content;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns:
-    [full-start] minmax(0, 1fr) [content-start] minmax(
-      0,
-      ${({ theme }) => theme.breakpoints.values.max}px
-    )
-    [content-end] minmax(0, 1fr) [full-end];
   margin: auto;
 
   ${({ theme }) => theme.breakpoints.up("desktop")} {

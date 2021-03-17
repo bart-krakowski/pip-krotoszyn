@@ -132,7 +132,13 @@ const Section = styled.section`
 `;
 
 const Main = styled.main`
-  grid-column: content;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(0, 1fr) [content-start] minmax(
+      0,
+      ${({ theme }) => theme.breakpoints.values.max}px
+    )
+    [content-end] minmax(0, 1fr) [full-end];
 `;
 
 const PostsWrapper = styled.div`
