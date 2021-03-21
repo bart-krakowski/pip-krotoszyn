@@ -4,7 +4,7 @@ import { SettingsContext } from "contexts/settingsContext";
 
 interface SEOProps {
   subTitle: string;
-  seoDescription: string;
+  seoDescription?: string;
   type: "article" | "page";
 }
 

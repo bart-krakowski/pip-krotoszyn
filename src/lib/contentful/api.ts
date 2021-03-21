@@ -71,6 +71,21 @@ export const getGalleries = async ({
   });
 };
 
+export interface GetSingleGalleryParams {
+  slug: string;
+}
+export const getSingleGallery = async ({ slug }: GetSingleGalleryParams) => {
+  const response = await client.getEntries<News>({
+    content_type: "gallery",
+    limit: 1,
+    "fields.slug[in]": slug,
+  });
+
+  const [post] = response.items;
+
+  return post;
+};
+
 export interface GetIntentionsProps {
   perPage?: number;
   currentPage?: number;
@@ -91,6 +106,23 @@ export const getIntentions = async ({
   });
 };
 
+export interface GetSingleIntensionParams {
+  slug: string;
+}
+export const getSingleIntension = async ({
+  slug,
+}: GetSingleIntensionParams) => {
+  const response = await client.getEntries<News>({
+    content_type: "intension",
+    limit: 1,
+    "fields.slug[in]": slug,
+  });
+
+  const [post] = response.items;
+
+  return post;
+};
+
 export interface GetAnnouncementsProps {
   perPage?: number;
   currentPage?: number;
@@ -109,6 +141,23 @@ export const getAnnouncements = async ({
     skip: perPage ? Math.abs(currentPage - 1) * perPage : 0,
     select: select,
   });
+};
+
+export interface GetSingleAnnoucementParams {
+  slug: string;
+}
+export const getSingleAnnoucement = async ({
+  slug,
+}: GetSingleAnnoucementParams) => {
+  const response = await client.getEntries<News>({
+    content_type: "intension",
+    limit: 1,
+    "fields.slug[in]": slug,
+  });
+
+  const [post] = response.items;
+
+  return post;
 };
 
 export const getNavigation = async (slug: string) => {

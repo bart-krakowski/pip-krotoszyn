@@ -2,10 +2,13 @@ import React, { FC } from "react";
 import styled from "styled-components";
 
 import Footer from "components/Footer";
+import { Navigation } from "components/Navigation";
 
 const PageLayout: FC = ({ children }) => (
   <Wrapper>
-    <NavigationContainer></NavigationContainer>
+    <NavigationSlot>
+      <Navigation />
+    </NavigationSlot>
     <ChildrenSlot>{children}</ChildrenSlot>
     <FooterSlot>
       <Footer />
@@ -15,15 +18,9 @@ const PageLayout: FC = ({ children }) => (
 
 const Wrapper = styled.div``;
 
-const NavigationContainer = styled.div`
-  width: calc(${({ theme }) => theme.breakpoints.values.max}px + 20px);
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-
-  ${(p) => p.theme.breakpoints.up("desktop")} {
-    padding: 0px;
-  }
+const NavigationSlot = styled.div`
+  position: relative;
+  z-index: 2;
 `;
 
 const FooterSlot = styled.div``;

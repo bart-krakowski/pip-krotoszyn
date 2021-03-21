@@ -53,7 +53,7 @@ export const getStaticProps: GetStaticProps<
       },
       category: {
         name: "Aktualności",
-        slug: "news",
+        slug: "aktualnosci",
       },
     },
   };

@@ -60,6 +60,7 @@ const IndexView: FC<IndexViewProps> = ({
             <PostsWrapper>
               {intensionsPosts && (
                 <PostTile
+                  type="intencje"
                   key={intensionsPosts[0].post.slug}
                   title={intensionsPosts[0].post.title}
                   slug={intensionsPosts[0].post.slug}
@@ -69,6 +70,7 @@ const IndexView: FC<IndexViewProps> = ({
               )}
               {announcementPosts && (
                 <PostTile
+                  type="ogloszenia"
                   key={announcementPosts[0].post.slug}
                   title={announcementPosts[0].post.title}
                   slug={announcementPosts[0].post.slug}
@@ -88,6 +90,7 @@ const IndexView: FC<IndexViewProps> = ({
             <PostsWrapper>
               {newsPosts.map(({ post, metadata }) => (
                 <PostTile
+                  type="aktualnosci"
                   key={post.slug}
                   title={post.title}
                   slug={post.slug}
@@ -106,6 +109,7 @@ const IndexView: FC<IndexViewProps> = ({
             <PostsWrapper>
               {galleryPosts.map(({ post, metadata }) => (
                 <PostTile
+                  type="galeria"
                   key={post.slug}
                   title={post.title}
                   slug={post.slug}

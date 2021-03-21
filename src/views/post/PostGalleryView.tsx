@@ -1,51 +1,31 @@
 import React, { FC, useMemo } from "react";
 import styled from "styled-components";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import HtmlStyledContent from "views/contentBlocks/HtmlStyledContent";
 import SEO from "components/SEO";
 import ImageObserver from "views/contentBlocks/Image/ImageObserverContext";
 import Hero from "./Hero";
-import { Announcement, Intention, News } from "lib/contentful";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { Gallery } from "lib/contentful";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 
 export interface NewsMetadata {
   createdAt: string;
 }
-export interface PostViewProps {
-  post: News | Announcement | Intention;
+export interface PostGallertViewProps {
+  post: Gallery;
   metadata: NewsMetadata;
   category: {
     name: string;
     slug: string;
   };
 }
-const PostView: FC<PostViewProps> = ({
+export const PostGallertView: FC<PostGallertViewProps> = ({
   post,
   metadata,
   children,
   category,
 }) => {
-  const content = useMemo(
-    () =>
-      post.content
-        ? documentToReactComponents(post.content, {
-            renderNode: {
-              [BLOCKS.EMBEDDED_ASSET]: (node) => (
-                <Zoom>
-                  <Img
-                    src={node.data?.target?.fields?.file?.url}
-                    alt={node.data?.target?.fields?.title}
-                  />
-                </Zoom>
-              ),
-            },
-          })
-        : null,
-    [post.content, post.thumbnail]
-  );
+  const images = useMemo(() => post.images, [post.images]);
 
   return (
     <ImageObserver>
@@ -62,7 +42,11 @@ const PostView: FC<PostViewProps> = ({
           category={{ name: category.name, slug: category.slug }}
         />
         <Content>
-          <HtmlStyledContent>{content}</HtmlStyledContent>
+          {images?.map((el) => (
+            <Zoom>
+              <Img src={el.fields.file.url} alt={el.fields.file.fileName} />
+            </Zoom>
+          ))}
         </Content>
         {children}
       </PostLayout>
@@ -83,5 +67,3 @@ const Img = styled.img`
   display: block;
   max-width: 100%;
 `;
-
-export default PostView;

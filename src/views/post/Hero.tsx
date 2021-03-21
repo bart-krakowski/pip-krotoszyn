@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import Link from "next/link";
 
 import Typography from "components/Typography";
 
@@ -20,9 +19,7 @@ const Hero: FC<HeroProps> = ({ title, image, date, category }) => (
         {new Date(date).toLocaleDateString()}
       </Typography>
       <TopBarInner>
-        <Link href={`/${category.slug}`} passHref>
-          <StyledLink>{category.name}</StyledLink>
-        </Link>
+        <StyledLink>{category.name}</StyledLink>
         <Typography variant="body1" color="secondary">
           / {title}
         </Typography>
@@ -88,7 +85,7 @@ const TopBarInner = styled.div`
   white-space: nowrap;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.p`
   ${({ theme }) => theme.typography.body1};
   color: ${({ theme }) => theme.palette.common.white};
 `;

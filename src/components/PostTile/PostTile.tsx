@@ -5,6 +5,7 @@ import Typography from "components/Typography";
 import { Asset } from "contentful";
 
 interface PostTileProps {
+  type: "aktualnosci" | "intencje" | "ogloszenia" | "galeria";
   title: string;
   img: Asset;
   date: string;
@@ -12,13 +13,14 @@ interface PostTileProps {
   variant?: "gallery" | "default";
 }
 const PostTile: FC<PostTileProps> = ({
+  type,
   title,
   img,
   date,
   slug,
   variant = "default",
 }) => (
-  <Wrapper href={`/news/${slug}`}>
+  <Wrapper href={`/${type}/${slug}`}>
     <Img src={img.fields.file.url} />
     <Content variant={variant}>
       {variant === "default" && (

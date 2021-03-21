@@ -5,6 +5,9 @@ export {
   getSettings,
   getSchedule,
   getSingleNews,
+  getGalleries,
+  getIntentions,
+  getAnnouncements,
 } from "./api";
 
 export type {
